@@ -96,6 +96,16 @@ function Skills({details, setDetails}) {
             <input className=" form-check-input" type="checkbox" value={ele.name} name="selected_assets" onChange={(e)=>addSkillToState(e,ele.name, ele.id)} />
             <label className="form-check-label" >{ele.name}</label>
         </li>)
+
+    const submitSkills = ()=>{
+        let arr = skillList.filter((ele)=>{
+            if (ele.check === true){
+                return true
+            }
+        })
+        console.log(arr)
+        setDetails({...details, skills:arr})
+    }
     return (
         <React.Fragment>
             <div>
@@ -104,6 +114,7 @@ function Skills({details, setDetails}) {
                 <ul className="row">
                     {optionList}
                 </ul>
+                <button type='button' className='btn btn-primary' onClick={submitSkills}>Add Skills</button>
             </div>
             <Certificate details={details} setDetails={setDetails}/>
             

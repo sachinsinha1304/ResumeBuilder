@@ -2,9 +2,9 @@
     float: right;
 }
 
-li{
+/* li{
     list-style: none;
-}
+} */
 
 .container-heading{
     text-align: center;
@@ -31,4 +31,12 @@ li{
 
 .box-individual-item{
     padding: 3%;
+}
+
+.container-resume{
+    margin-left: 20%;
+    margin-right: 20%;
+    border:solid 1px black;
+    padding:2%;
+    font-family: 'Times New Roman', Times, serif;
 }

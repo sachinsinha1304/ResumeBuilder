@@ -32,13 +32,13 @@ function Experience({details,setDetails}) {
             <div className="mb-3 row">
                 <label  className="col-sm-2 col-form-label">Start Year</label>
                 <div className="col-sm-10">
-                <input type="datetime-local" className="form-control" name='startDate' onChange={(e)=>updateExperience(e, idx)} value={ele.value.startDate} />
+                <input type="date" className="form-control" name='startDate' onChange={(e)=>updateExperience(e, idx)} value={ele.value.startDate} />
                 </div>
             </div>
             <div className="mb-3 row">
                 <label  className="col-sm-2 col-form-label">End Year</label>
                 <div className="col-sm-10">
-                <input type="datetime-local" className="form-control" name='endDate' onChange={(e)=>updateExperience(e, idx)} value={ele.value.endDate} />
+                <input type="date" className="form-control" name='endDate' onChange={(e)=>updateExperience(e, idx)} value={ele.value.endDate} />
                 </div>
             </div>
             <div className="mb-3 row">

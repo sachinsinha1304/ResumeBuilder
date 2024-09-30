@@ -26,8 +26,7 @@ function Main() {
     let html
 
     useEffect(()=>{
-        console.log(page)
-        if (page === 5){
+        if (page === 6){
             setPage(page-1)
             alert("this is the last page")
         }
@@ -45,12 +44,14 @@ function Main() {
         html = <Skills details={details} setDetails={setDetails}/>
     }
     else if (page === 5){
+        console.log(details)
         html = <Review details={details} />
     }
 
     return (
         <React.Fragment>
             <Navbar />
+            {page <  5 ?
             <div className='container container-box-style'>
                 <form>
                     {html}
@@ -60,7 +61,8 @@ function Main() {
                     </div>
                 </form>
                 
-            </div>
+            </div> : <div className='container-resume'>{html}</div>
+            }
             
         </React.Fragment>
     )
